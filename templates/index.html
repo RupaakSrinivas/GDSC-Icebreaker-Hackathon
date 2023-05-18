@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/submit" method="post">
+        <div class="personality_form">
+            <label for="personality_input">Select the personality</label>
+            <select name="personality" id="personality_input" >
+                <option value="default">select a personality</option>
+                <option value="emotion 1">Sad</option>
+                <option value="emotion 2">sarcastic</option>
+                <option value="emotion 3">passive-aggresive</option>
+                <option value="emotion 4">overly happy</option>
+            </select>
+        </div>   
+        <div class="dish_form">
+            <label for="dish_input">Enter the dish ypu want to make</label>
+            <input type="text" id="dish_input" placeholder="Enter the dish here" name="dish">
+        </div>
+        <div class="submit_form">
+            <input type="submit">
+            <input type="reset">
+        </div>
+    </form>
+
+</body>
+</html>
