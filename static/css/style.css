@@ -1,0 +1,11 @@
+.input_form{
+    border: solid;
+    padding: 20%;
+
+}
+body{
+    border : hidden;
+    padding-top: 10%;
+    padding-left: 10%;
+    padding-right: 10%
+}
