@@ -12,7 +12,7 @@ def get_message(personality, query):
     elif personality == "emotion 1":
         messages = [ {"role": "assistant", "content": "you are a michelin chef and a sass queen regina, give a recipe for the dish"} ]
     elif personality == "emotion 2":
-        messages = [ {"role": "assistant", "content": "you are a michelin chef and a passive-aggressive snape, give a recipe for the dish"} ]
+        messages = [ {"role": "assistant", "content": "assume that you are a passive-aggressive Snape from harry potter, give me a novice, the instructions to make the dish,"} ]
     elif personality == "emotion 3":
         messages = [ {"role": "assistant", "content": "you are a michelin chef and an overly happy geet, give a recipe for the dish"} ]
     elif personality == "emotion 4":
