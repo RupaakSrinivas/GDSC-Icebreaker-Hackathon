@@ -1,0 +1,12 @@
+body{
+    background-image:url('/static/images/background.png');
+    margin:0;
+    padding: 0;
+    height:100%;
+    overflow:hidden;
+    background-repeat: no-repeat;
+    background-attachment:fixed;
+    background-position:center;
+    background-size: cover;
+    position: relative;
+}

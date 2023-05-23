@@ -4,34 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/static/css/style.css" rel="stylesheet">
+    <link href="/static/css/index_style.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    <div class="input_form" >
-        <center>
-            <form action="/submit" method="post">
-                <div class="personality_form">
-                    <label for="personality_input">Select the personality</label>
-                    <select name="personality" id="personality_input" >
-                        <option value="default">select a personality</option>
-                        <option value="emotion 1">sass Queen Regina</option>
-                        <option value="emotion 2">passive-aggresive Snape</option>
-                        <option value="emotion 3">Overly happy Geet</option>
-                        <option value="emotion 4">old and sad Chef</option>
-                    </select>
-                </div>   
-                <br>
-                <div class="dish_form">
-                    <label for="dish_input">Enter the dish you want to make</label>
-                    <input type="text" id="dish_input" placeholder="Enter the dish here" name="dish">
-                </div>
-                <div class="submit_form">
-                    <input type="submit">
-                    <input type="reset">
-                </div>
-            </form>
-        </center>
+    <div class="container">
+        <h1>Recipe Selector</h1>
+        <form action="/submit" method="post">
+            <!-- <div class="form-group">
+                <label for="personality_input">Select a personality:</label>
+                <select name="personality" id="personality_input">
+                    <option value="default">Select a personality</option>
+                    <option value="emotion 1">Sass Queen Regina</option>
+                    <option value="emotion 2">Passive-aggressive Snape</option>
+                    <option value="emotion 3">Overly Happy Geet</option>
+                    <option value="emotion 4">Sad</option>
+                </select>
+            </div> -->
+            <div class="form-group">
+                <label for="dish_input">Enter the dish you want to make:</label>
+                <input type="text" id="dish_input" placeholder="Enter the dish here" name="dish">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </div>
+        </form>
+        <div class="response-form">
+            {% if message %}
+                <p>Response:</p>
+                <pre>{{ message }}</pre>
+            {% endif %}
+        </div>
     </div>
 </body>
 </html>

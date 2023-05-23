@@ -8,18 +8,41 @@ app=Flask(__name__)
 async def send_message(personality, query):
     try:
         response = get_message(personality, query)
-        print("response : ",response)
-        return response
+        return render_template('index.html', message=response)
     except Exception as e:
         print(e)
 
+#declaring inputs
+
+personality = ""
+#defining routes
+
 @app.route('/')
-def index():
+def front():
+    return render_template('front_page.html')
+
+@app.route('/feeling')
+def feeling():
+    return render_template('feeling.html')
+
+# @app.route('/index')
+# def index():
+#     return render_template('index.html')
+
+# def post(output):
+#     message = output
+#     return render_template('index.html', message=message)
+
+@app.route('/submit_personality', methods=['POST'])
+def submit_personality():
+    global personality
+    personality = request.form.get('personality')
+    print(personality)
     return render_template('index.html')
 
 @app.route('/submit', methods =['POST'])
 async def submit():
-    personality = request.form.get('personality')
+    global personality
     query = request.form.get('dish')
     reply = await send_message(personality, query)
     return str(reply)
