@@ -10,3 +10,108 @@ body{
     background-size: cover;
     position: relative;
 }
+
+.heading_box{
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    left: 0px;
+    top: 1px;
+
+    background: linear-gradient(112.79deg, rgba(53, 159, 194, 0.56) 0%, rgba(55, 69, 54, 0.35) 98.88%);
+    box-shadow: 0px 4px 26px 6px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12.5px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 20px;
+}
+
+.heading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Aladin', cursive;
+    font-size: 48px;
+    line-height: 101px;
+    color: #F49D5F;
+}
+
+.form_title{
+    width: 77%;
+    top:25.44px;
+    height:46.81px;
+    padding-left: 21%;
+    /* position: absolute; */
+    align-items: center;
+    /* position: absolute; */
+    font-family: 'Single Day', cursive;
+    font-size: 38px;
+    /* identical to box height */
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.input_personality_form{
+    box-sizing: border-box;
+    position: absolute;
+    width: 840px;
+    height: 480px;
+    left: 415px;
+    top: 118px;
+
+    background: linear-gradient(109.2deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.25) 100%);
+    box-shadow: 0px 5.02377px 5.02377px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(15.6993px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 25.1188px;
+}
+
+.input_button{
+/* Rectangle 10 */
+    box-sizing: border-box;
+    position: absolute;
+    width: 344.4px;
+    height: 131.62px;
+
+    background: #222222;
+    box-shadow: 0px 5.02377px 12.5594px 8.79159px rgba(0, 0, 0, 0.25);
+    border-radius: 17.5832px;
+}
+
+.button1{
+    left: 445.2px;
+    top: 114.42px;
+}
+
+.button2{
+    left: 50.4px;
+    top: 300.46px;
+}
+
+.button3{
+    left: 50.4px;
+    top: 114.42px;
+}
+
+.button4{
+    left: 445.2px;
+    top: 300.46px;
+}
+
+.input_personality_button{
+    position: absolute;
+    font-family: 'Baskerville Old Face';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 45.2139px;
+    line-height: 45px;
+    margin: 0px;
+    background-color: transparent;
+    color: #ffffff;
+}
+
+.

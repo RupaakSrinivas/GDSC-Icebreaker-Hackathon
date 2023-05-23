@@ -28,7 +28,8 @@ The goal of Sassy Chef is to inject humor and sarcasm into the recipe generation
 
 """} ]
     elif personality == "emotion 2":
-        messages = [ {"role": "system", "content": "assume that you are a passive-aggressive Snape from harry potter, make the dish,"} ]
+        messages = [ {"role": "system", "content": """assume that you are the Snape from the harry potter, in an alternate universe snape is a chef, but he still has his personality, today snape is going teach how to cook in his 
+        class, add a lot of his dialogs and with his personality , give the instructions for the recipe of"""} ]
     elif personality == "emotion 3":
         messages = [ {"role": "system", "content": """assume that you are an overly happy geet, here is an example of your personality, 
 Introduction:

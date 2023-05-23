@@ -1,23 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feeling selection</title>
-    <link href="/style/css/feeling_style.css" rel="stylesheet">
+    <link href="/static/css/feeling_style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Single+Day&display=swap" rel="stylesheet">
 </head>
+
 <body>
+    <div class="heading_box">
+        <div class="heading">
+            <p>Schizo Chef</p>
+        </div>
+    </div>
     <form action="/submit_personality" method="post">
         <div class="input_personality_form">
-            <button onclick="input_personality('emotion 1')"  value="Sass_Queen_Regina" class="input_personality_button">Sass Queen Regina</button>
-            <button onclick="input_personality('emotion 2')" value="passive-aggressive-snape" class="input_personality_button">Passive Aggressive Snape</button>
-            <br>
-            <button onclick="input_personality('emotion 3')" value="overly-happy-geet" class="input_personality_button">Overly Happy Geet</button>
-            <button onclick="input_personality('emotion 4')" value="sad" class="input_personality_button">Sad</button>
+            <div class="form_title">
+                <p>What are we feeling today?</p>
+            </div>
+            <div class="input_button button1">
+                <button onclick="input_personality('emotion 1')" value="Sass_Queen_Regina"
+                    class="input_personality_button per2">Regina</button>
+            </div>
+            <div class="input_button button2">
+                <button onclick="input_personality('emotion 2')" value="passive-aggressive-snape"
+                    class="input_personality_button per3">Savy Snape</button>
+            </div>
+            <div class="input_button button3">
+                <button onclick="input_personality('emotion 3')" value="overly-happy-geet"
+                    class="input_personality_button per1">Geet</button>
+            </div>
+            <div class="input_button button4">
+                <button onclick="input_personality('emotion 4')" value="sad"
+                    class="input_personality_button per4">Le VITian</button>
+            </div>
         </div>
         <script>
-            function input_personality( emotion){
+            function input_personality(emotion) {
                 document.getElementById("personality_input").value = emotion;
 
                 document.querySelector("form").submit();
@@ -26,4 +50,5 @@
         <input id="personality_input" value="" type="hidden" name="personality">
     </form>
 </body>
+
 </html>
