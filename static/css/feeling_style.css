@@ -125,6 +125,26 @@ body{
     justify-content: left;
 }
 
+.box5{
+    position:absolute;
+    font-size: 25px;
+    font-family: 'Baskervville', serif;
+    color: #FFFFFF;
+    top:100%;
+    left:0;
+    height:50px;
+    width:100%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background: #222222;
+    box-shadow: 0px 5.02377px 12.5594px 8.79159px rgba(0, 0, 0, 0.25);
+    border-radius: 17.5832px;
+}
+
+.box5:hover{
+    background-color: #F49D5F;
+}
+
 .regina_image{
     position:absolute;
     left:616px;

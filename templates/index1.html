@@ -22,14 +22,15 @@
             <form>
                 <div class="switch_personality">
                     <label for="switch_personality_menu"></label>
-                    <select id="switch_personality_menu" name="personality">
-                        <option value="Geet">Geet</option>
-                        <option value="Regina">Regina</option>
-                        <option value="Snape">Snape</option>
-                        <option value="Vitian">LeVit</option>
+                    <select id="switch_personality_menu" name="person">
+                        <option value="Geet" {% if person == "emotion 3" %}selected{% endif %}>Geet</option>
+                        <option value="Regina" {% if person == "emotion 1" %}selected{% endif %}>Regina</option>
+                        <option value="Snape" {% if person == "emotion 2" %}selected{% endif %}>Snape</option>
+                        <option value="Vitian" {% if person == "emotion 4" %}selected{% endif %}>LeVit</option>
+                        <option value="Advanced" {% if person == "advanced" %}selected{% endif %}>Advanced</option>
                     </select>
                 </div>
-            </form>
+            </form>            
             <div class="toolbar_title">
                 <h1>Schizo Chef</h1>
             </div>
@@ -63,7 +64,7 @@
             <div class="output_box">
                 {% if message %}
                 <p>Response:</p>
-                <pre>{{ message | safe }}</pre>
+                <p>{{ message | safe }}</p>
                 {% endif %}
             </div>
             <div class="input_field">
