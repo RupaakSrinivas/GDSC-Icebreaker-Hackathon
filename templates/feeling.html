@@ -9,35 +9,39 @@
     <link href="/static/css/feeling_style.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Single+Day&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Baskervville&family=Single+Day&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <div class="heading_box">
-        <div class="heading">
-            <p>Schizo Chef</p>
-        </div>
     </div>
+    
     <form action="/submit_personality" method="post">
         <div class="input_personality_form">
             <div class="form_title">
                 <p>What are we feeling today?</p>
             </div>
+            <img class="regina_image" src="/static/images/regina.png">
+            <img  class="snape_image" src="/static/images/snape.png">
+            <img class="geet_image" src="/static/images/geet.png">
+            <img class="leVitian_image" src="/static/images/levit.png">
             <div class="input_button button1">
+                <!-- <img class="Regina_image" src="/static/images/regina.png"> -->
                 <button onclick="input_personality('emotion 1')" value="Sass_Queen_Regina"
-                    class="input_personality_button per2">Regina</button>
+                    class="input_box box2">Regina</button>
             </div>
             <div class="input_button button2">
                 <button onclick="input_personality('emotion 2')" value="passive-aggressive-snape"
-                    class="input_personality_button per3">Savy Snape</button>
+                    class="input_box box3">Savy<br>Snape</button>
+                
             </div>
             <div class="input_button button3">
                 <button onclick="input_personality('emotion 3')" value="overly-happy-geet"
-                    class="input_personality_button per1">Geet</button>
+                    class="input_box box1">Geet</button>
             </div>
             <div class="input_button button4">
                 <button onclick="input_personality('emotion 4')" value="sad"
-                    class="input_personality_button per4">Le VITian</button>
+                    class="input_box box4">Le VITian</button>
             </div>
         </div>
         <script>
