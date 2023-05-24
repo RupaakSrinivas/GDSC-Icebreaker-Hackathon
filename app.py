@@ -38,7 +38,7 @@ def submit_personality():
     global personality
     personality = request.form.get('personality')
     print(personality)
-    return render_template('index.html')
+    return render_template('index1.html')
 
 @app.route('/submit', methods =['POST'])
 async def submit():

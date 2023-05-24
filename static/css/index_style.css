@@ -12,7 +12,20 @@ body {
     padding: 20px;
     overflow-wrap: break-word;
 }
+.toolbar{
+    position: absolute;
+    width: 1949px;
+    height: 104px;
+    left: -29px;
+    top: -1px;
 
+    background: linear-gradient(112.27deg, rgba(244, 157, 95, 0.25) 7.01%, rgba(164, 190, 225, 0.13) 98.87%);
+    box-shadow: 0px 4px 26px 6px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(12.5px);
+    /* Note: backdrop-filter has minimal browser support */
+
+    border-radius: 0px 0px 20px 20px;
+}
 h1 {
     text-align: center;
     margin-bottom: 20px;
