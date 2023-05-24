@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template
 from aiapi import get_message
+from advanced_bot import advan_prompt
 import asyncio
 
 
@@ -39,11 +40,23 @@ def submit_personality():
     global personality
     personality = request.form.get('personality')
     print(personality)
+    if personality == "advanced":
+        return render_template('advanced_input1.html', person=personality)
     return render_template('index1.html', person=personality)
 
 @app.route('/submit_advanced', methods=['POST'])
 async def submit_advanced():
-    query = 
+    age = request.form.get("age");
+    extraversion = request.form.get("extra")
+    openess = request.form.get("secret")
+    neuroticism = request.form.get("neuro")
+    cons = request.form.get("cons")
+    recipe = request.form.get("recipe")
+    query = await advan_prompt(age, extraversion, openess, neuroticism, cons, recipe)
+    personality="advanced"
+    reply = await send_message(personality, query)
+
+    return str(reply)
 
 @app.route('/submit', methods =['POST'])
 async def submit():

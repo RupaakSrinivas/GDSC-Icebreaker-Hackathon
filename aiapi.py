@@ -51,6 +51,9 @@ Talking: A sarcastic and depressed person may employ dark humor, using witty rem
 Acting: Their actions might display a lack of enthusiasm or motivation. They may appear distant or withdrawn, seeking solitude to reflect on their thoughts and feelings. They might exhibit a dry and cynical demeanor, finding it challenging to engage in activities or show excitement.
 
 Thinking: A sarcastic and depressed person's thoughts may revolve around negative self-perception, feelings of worthlessness, or hopelessness. They may engage in self-critical thinking and struggle to find joy or meaning in life. Sarcasm could be used as a defense mechanism to distance themselves from their emotions and avoid vulnerability."""
+    elif personality == "advanced":
+        query=query
+    
     messages = [ {"role": "system", "content": query} ]
     print(messages)
     chat = openai.ChatCompletion.create(

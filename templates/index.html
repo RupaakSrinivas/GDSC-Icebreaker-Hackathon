@@ -13,21 +13,63 @@
     <div class="container">
         <h1>Recipe Selector</h1>
         <form action="/submit" method="post">
-            <div class="form-group">
-                <label for="dish_input">Enter the dish you want to make:</label>
-                <input type="text" id="dish_input" placeholder="Enter the dish here" name="dish">
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Submit">
-                <input type="reset" value="Reset">
-            </div>
+            <label for="Age">Age : </label>
+            <label for="toddler">Toddler</label>
+            <input type="radio" id="toddler" name="age" value="Toddler">
+            <label for="adult">Adult</label>
+            <input type="radio" id="adult" name="age" value="Adult">
+            <label for="old">Old</label>
+            <input type="radio" id="old" name="age" value="Old">
+    
+            <br>
+    
+            <label for="Neuroticism_input">Neuroticism : </label>
+            <label for="depressed">Depressed</label>
+            <input type="radio" id="depressed" name="neuro" value="Depressed">
+            <label for="mildly_unstable">Mildly Unstable</label>
+            <input type="radio" id="mildly_unstaable" name="neuro" value="Mildly Unstable">
+            <label for="happy">Happy</label>
+            <input type="radio" id="happy" name="neuro" value="Happy">
+    
+            <br>
+    
+            <label for="Cons">Cons : </label>
+            <label for="Very_Carefull">Very Carefull</label>
+            <input type="radio" id="Very_carefull" name="cons" value="very_carefull">
+            <label for="disorganised">Very Carefull</label>
+            <input type="radio" id="disorganised" name="cons" value="disorganised">
+    
+            <br>
+    
+            <label for="Openness">Openness : </label>
+            <label for="Detective">Detective</label>
+            <input type="radio" id="Detective" name="secret" value="secret">
+            <label for="average">Average</label>
+            <input type="radio" id="Detective" name="secret" value="average">
+            <label for="no_secret">No Secreet</label>
+            <input type="radio" id="no_secret" name="secret" value="no secret">
+    
+            <br>
+    
+            <label for="extravertness">Extravertness : </label>
+            <label for="Extrovert">Extrovert</label>
+            <input type="radio" id="Extrovert" name="extra" value="extrovert">
+    
+            <label for="Introvert">Introvert</label>
+            <input type="radio" id="Introvert" name="extra" value="introvert">
+    
+            <label for="Ambivert">Ambivert</label>
+            <input type="radio" id="Ambivert" name="extra" value="ambivert">
+    
+            <br>
+    
+            <label for="recipe">Recipe</label>
+            <input type="text" id="recipe" name="recipe" placeholder="Enter your recipe">
+    
+            <br>
+            <input type="submit">
+            <input type="reset">
         </form>
-        <div class="response-form">
-            {% if message %}
-            <p>Response:</p>
-            <p>{{ message | safe }}</p>
-            {% endif %}
-        </div>
     </div>
 </body>
 
