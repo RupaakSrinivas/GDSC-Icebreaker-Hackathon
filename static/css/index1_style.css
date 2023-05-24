@@ -160,3 +160,72 @@ body{
     font-size: 32px;
     color: #FFFFFF;
 }
+
+.chef{
+    box-sizing: border-box;
+    position: relative;
+    top:10px;
+    width: 100%;
+    border: 0px solid #FFFFFF;
+    border-radius: 100px;
+    height:70px;
+    position:absolute;
+}
+
+.chef_profile{
+    position:absolute;
+    height:80%;
+    justify-content: center;
+    top:10%;
+    left:1%;
+}
+
+.chefs_words{
+    position:absolute;
+    left:10%;
+    font-family: 'Lato', sans-serif;
+    font-size: 30px;
+    line-height: 10px;
+
+    color: #F9F9F9;
+}
+
+.output_box{
+    box-sizing: border-box;
+    top:15%;
+    width:100%;
+    min-height:70px;
+    max-height: 400px;
+    overflow-y:auto;
+    white-space:pre-wrap;
+    word-break: break-word;
+    position: absolute;
+    align-content: left;
+    background: #2C241C;
+    border-radius: 8px;
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+    padding-left: 10px;
+    color:#F9F9F9;
+}
+
+.input_field input{
+    position: absolute;
+    width:90%;
+    bottom : 0;
+    left:5%;
+    height:40px;
+    top:88%;
+    background: #F49D5F;
+    box-shadow: inset 0px 0px 32px -8px rgba(0, 0, 0, 0.25);
+    border-radius: 11px;
+    font-size: 30px;
+    font-family: 'Lato', sans-serif;
+    text-align:left;
+    color: #1B1713;
+}
+
+.input_field input::placeholder{
+    text-indent: 50px;
+    color:#1B1713;
+}

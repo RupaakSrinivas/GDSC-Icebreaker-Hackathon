@@ -8,7 +8,7 @@ app=Flask(__name__)
 async def send_message(personality, query):
     try:
         response = get_message(personality, query)
-        return render_template('index.html', message=response)
+        return render_template('index1.html', message=response)
     except Exception as e:
         print(e)
 

@@ -10,7 +10,8 @@
     <script src="https://kit.fontawesome.com/783ff77141.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Aladin&family=Baskervville&family=Single+Day&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aladin&family=Baskervville&family=Lato&family=Single+Day&display=swap"
         rel="stylesheet">
     <title>Document</title>
 </head>
@@ -49,7 +50,35 @@
             </div>
         </div>
         <div class="input_body">
-
+            <div class="chef">
+                <div>
+                    <img class="chef_profile" src="/static/images/chef_profile.png">
+                </div>
+                <div class="chefs_words">
+                    <p>
+                        well well well... wouldn't you want to know
+                    </p>
+                </div>
+            </div>
+            <div class="output_box">
+                {% if message %}
+                <p>Response:</p>
+                <pre>{{ message | safe }}</pre>
+                {% endif %}
+            </div>
+            <div class="input_field">
+                <form action="/submit" method="post" id="myForm">
+                    <label for="input_field"></label>
+                    <input type="text" id="dish_input" placeholder="Enter a recipe" name="dish">
+                    <script>
+                        document.getElementById("dish_input").addEventListener("keydown", function (event) {
+                            if (event.key === "Enter") {
+                                event.preventDefault(); // Prevent the default form submission behavior
+                                document.getElementById("myForm").submit();
+                            }}); // Submit the form
+                    </script>
+                </form>
+            </div>
         </div>
 </body>
 
