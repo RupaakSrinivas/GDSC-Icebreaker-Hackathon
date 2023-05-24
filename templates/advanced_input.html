@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/static/css/index1_style.css" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/783ff77141.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Aladin&family=Baskervville&family=Lato&family=Single+Day&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body class="index_body">
+    <div class="container">
+        <div class="toolbar">
+            <form>
+                <div class="switch_personality">
+                    <label for="switch_personality_menu"></label>
+                    <select id="switch_personality_menu" name="person">
+                        <option value="Geet" {% if person=="emotion 3" %}selected{% endif %}>Geet</option>
+                        <option value="Regina" {% if person=="emotion 1" %}selected{% endif %}>Regina</option>
+                        <option value="Snape" {% if person=="emotion 2" %}selected{% endif %}>Snape</option>
+                        <option value="Vitian" {% if person=="emotion 4" %}selected{% endif %}>LeVit</option>
+                        <option value="Advanced" {% if person=="advanced" %}selected{% endif %}>Advanced</option>
+                    </select>
+                </div>
+            </form>
+            <div class="toolbar_title">
+                <h1>Schizo Chef</h1>
+            </div>
+            <div class="toolbar_profile">
+                <i class="fa-solid fa-user fa-2xl" style="color: #ffffff;"></i>
+            </div>
+            <div class="toolbar_like">
+                <i class="fa-solid fa-heart fa-2xl" style="color: #ffffff;"></i>
+            </div>
+        </div>
+        <div class="index_new_chat">
+            <p> + New User</p>
+        </div>
+        <div class="user_info_box">
+            <p class="user_info_box_text">Noobmaster69</p>
+            <div class="user_info_box_profile">
+                <i class="fa-solid fa-user" style="color: #ffffff;"></i>
+            </div>
+        </div>
+        <div class="input_body">
+            <div class="chef">
+                <div>
+                    <img class="chef_profile" src="/static/images/chef_profile.png">
+                </div>
+                <div class="chefs_words">
+                    <p>
+                        well well well... wouldn't you want to know
+                    </p>
+                </div>
+            </div>
+            <div class="output_box">
+                <form action="/submit_advanced" method="post">
+                    <div class="age_input">
+                        <label for="Age">Age: </label>
+                        <label for="toddler">Toddler</label>
+                        <input type="radio" id="toddler" name="age" value="Toddler">
+                        <label for="adult">Adult</label>
+                        <input type="radio" id="adult" name="age" value="Adult">
+                        <label for="old">Old</label>
+                        <input type="radio" id="old" name="age" value="Old">
+                        <label for="input_field"></label>
+                        <input type="text" id="dish_input" placeholder="Enter a recipe" name="dish">
+                    </div>
+                    <br>
+                    <div class="Neurotisim_input">
+                        <label for="Neurotisim">Neurotism : </label>
+                        <label for="depressed">Depressed</label>
+                        <input type="radio" id="depressed" name="neuro" value="Depressed">
+
+
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="input_field">
+            <!-- <form action="/submit" method="post" id="myForm">
+                    <label for="input_field"></label>
+                    <input type="text" id="dish_input" placeholder="Enter a recipe" name="dish">
+                    <script>
+                        document.getElementById("dish_input").addEventListener("keydown", function (event) {
+                            if (event.key === "Enter") {
+                                event.preventDefault(); // Prevent the default form submission behavior
+                                document.getElementById("myForm").submit();
+                            }}); // Submit the form
+                    </script>
+                </form> -->
+        </div>
+    </div>
+</body>
+
+</html>

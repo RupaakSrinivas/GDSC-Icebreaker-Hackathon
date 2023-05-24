@@ -8,7 +8,8 @@ app=Flask(__name__)
 async def send_message(personality, query):
     try:
         response = get_message(personality, query)
-        return render_template('index1.html', message=response)
+        print(personality)
+        return render_template('index1.html', message=response, person=personality)
     except Exception as e:
         print(e)
 
@@ -38,7 +39,11 @@ def submit_personality():
     global personality
     personality = request.form.get('personality')
     print(personality)
-    return render_template('index1.html')
+    return render_template('index1.html', person=personality)
+
+@app.route('/submit_advanced', methods=['POST'])
+async def submit_advanced():
+    query = 
 
 @app.route('/submit', methods =['POST'])
 async def submit():
