@@ -60,5 +60,6 @@ Thinking: A sarcastic and depressed person's thoughts may revolve around negativ
         model = "gpt-3.5-turbo",
         messages = messages
     )
+    print(reply)
     reply = str(chat.choices[0].message.content)
     return reply
